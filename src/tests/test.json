@@ -1,0 +1,252 @@
+[
+  {
+    "category": "A_Single_Hop",
+    "question": "世界上第一个心理学实验室是由谁建立的？",
+    "ground_truth": "由德国心理学家冯特建立。"
+  },
+  {
+    "category": "A_Single_Hop",
+    "question": "心理学研究中最核心、最常用来揭示因果关系的实证研究方法是哪一种？",
+    "ground_truth": "实验法。"
+  },
+  {
+    "category": "A_Single_Hop",
+    "question": "瞬时记忆（感觉记忆）的信息保持时间通常是多长？",
+    "ground_truth": "0.25-2秒。"
+  },
+  {
+    "category": "A_Single_Hop",
+    "question": "著名的“艾宾浩斯遗忘曲线”揭示了什么样的遗忘规律？",
+    "ground_truth": "遗忘的规律是先快后慢。"
+  },
+  {
+    "category": "A_Single_Hop",
+    "question": "在马斯洛的需要层次理论中，处于最高层次的需要是什么？",
+    "ground_truth": "自我实现需要。"
+  },
+  {
+    "category": "A_Single_Hop",
+    "question": "在儿童心理发展中，婴儿通常在几个月大时会出现社会性微笑？",
+    "ground_truth": "3-4个月。"
+  },
+  {
+    "category": "A_Single_Hop",
+    "question": "青少年期（12-18岁）的核心发展任务是什么？",
+    "ground_truth": "核心发展任务是自我同一性的建立，摆脱童年的依赖，形成独立的人格。"
+  },
+  {
+    "category": "A_Single_Hop",
+    "question": "社会影响现象中，“登门槛效应”属于哪种现象的常用策略？",
+    "ground_truth": "依从。"
+  },
+  {
+    "category": "A_Single_Hop",
+    "question": "在临床心理治疗中，哪种疗法的核心技术是“认知重评法”？",
+    "ground_truth": "认知治疗（如认知行为疗法CBT或合理情绪疗法RET）。"
+  },
+  {
+    "category": "A_Single_Hop",
+    "question": "在企业管理中，为了缓解员工的工作压力与职业倦怠，通常会搭建什么支持体系？",
+    "ground_truth": "员工心理健康支持体系（EAP员工援助计划）。"
+  },
+  {
+    "category": "B_Multi_Hop",
+    "question": "行为主义心理学提出了哪两种重要的条件反射理论？它们的代表人物分别是谁？",
+    "ground_truth": "提出了经典条件反射和操作性条件反射。经典条件反射的代表人物是巴甫洛夫，操作性条件反射的代表人物是斯金纳。"
+  },
+  {
+    "category": "B_Multi_Hop",
+    "question": "感觉的强度规律受到两个著名定律的影响，韦伯定律和费希纳定律分别描述了什么？",
+    "ground_truth": "韦伯定律指出感觉的差别阈限与原刺激量成正比；费希纳定律指出感觉强度与刺激强度的对数成正比。"
+  },
+  {
+    "category": "B_Multi_Hop",
+    "question": "想象可以分为无意想象和有意想象，其中有意想象又可以进一步细分为哪三种类别？",
+    "ground_truth": "再造想象、创造想象和幻想。"
+  },
+  {
+    "category": "B_Multi_Hop",
+    "question": "在个性心理特征中，韦氏测验常用于测量哪种特征？而“多血质”又属于哪种核心特征的分类？",
+    "ground_truth": "韦氏测验用于测量能力（智力）；“多血质”属于气质的分类。"
+  },
+  {
+    "category": "B_Multi_Hop",
+    "question": "幼儿期（1-3岁）和学龄前期（3-6岁）在思维方式上的主要共同点是什么？学龄前期又出现了什么思维上的新萌芽？",
+    "ground_truth": "两者的思维都以具体形象思维为主。学龄前期的新变化是开始出现抽象逻辑思维的萌芽。"
+  },
+  {
+    "category": "B_Multi_Hop",
+    "question": "在社会归因中，韦纳的理论将行为原因划分为了哪三个维度？同时又划分了哪四个具体因素？",
+    "ground_truth": "三个维度是：内部和外部归因、稳定和不稳定归因、可控和不可控归因。四个具体因素是：能力、努力、任务难度、运气。"
+  },
+  {
+    "category": "B_Multi_Hop",
+    "question": "从众的原因可以分为哪两种？其中个体为了获得群体的认可和接纳而表现出的从众属于哪一种？",
+    "ground_truth": "分为信息性从众和规范性从众。为了获得群体认可而从众属于规范性从众。"
+  },
+  {
+    "category": "B_Multi_Hop",
+    "question": "临床心理学与精神病学虽然都研究心理障碍，但它们在治疗方法上的主要区别是什么？",
+    "ground_truth": "临床心理学主要采用心理治疗和心理咨询的方法；精神病学主要采用药物治疗和住院治疗的方法。"
+  },
+  {
+    "category": "B_Multi_Hop",
+    "question": "心理障碍的预防分为三个层次。其中针对普通人群开展心理健康教育，以及针对有心理问题的高危人群进行早期筛查干预，分别属于哪个预防层次？",
+    "ground_truth": "针对普通人群属于一级预防；针对高危人群属于二级预防。"
+  },
+  {
+    "category": "B_Multi_Hop",
+    "question": "在企业管理中，优化工作流程与环境设计，以及设计科学的薪酬激励体系，分别主要是基于心理学的哪些具体理论？",
+    "ground_truth": "优化工作流程主要是基于工程心理学理论；设计薪酬激励主要是基于动机理论与强化理论。"
+  },
+  {
+    "category": "C_Pronoun",
+    "history": [
+      {
+        "role": "user",
+        "content": "心理学中有个流派非常强调人的自我实现和积极潜能。"
+      },
+      {
+        "role": "assistant",
+        "content": "是的，那是人本主义心理学，代表人物是马斯洛和罗杰斯。"
+      }
+    ],
+    "question": "它的研究重点具体是什么？",
+    "ground_truth": "研究重点是人的价值、尊严和自我实现的过程。"
+  },
+  {
+    "category": "C_Pronoun",
+    "history": [
+      {
+        "role": "user",
+        "content": "记忆通常可以划分为瞬时记忆、短时记忆和长时记忆。"
+      },
+      {
+        "role": "assistant",
+        "content": "没错，它们在容量大小和保持时间上各有不同特点。"
+      }
+    ],
+    "question": "其中哪一种记忆的容量通常是7±2个组块，且必须通过复述才能长期保持？",
+    "ground_truth": "短时记忆。"
+  },
+  {
+    "category": "C_Pronoun",
+    "history": [
+      {
+        "role": "user",
+        "content": "心理学中有一种情绪状态是强烈、短暂且爆发性的。"
+      },
+      {
+        "role": "assistant",
+        "content": "这种情绪状态被称为激情，比如人们常说的狂喜或暴怒。"
+      }
+    ],
+    "question": "与它相对立，那种微弱且持久的情绪状态被称为什么？",
+    "ground_truth": "心境。"
+  },
+  {
+    "category": "C_Pronoun",
+    "history": [
+      {
+        "role": "user",
+        "content": "在意志品质的强化训练中，有一种方法叫做“10分钟法则”。"
+      },
+      {
+        "role": "assistant",
+        "content": "这种方法主要被用来干预即时性的本能冲动，设置冷却期。"
+      }
+    ],
+    "question": "它要求个体在等待的这段时间内具体做些什么以阻断冲动？",
+    "ground_truth": "梳理该冲动行为的短期收益与长期代价，锚定自己的核心长期目标。"
+  },
+  {
+    "category": "C_Pronoun",
+    "history": [
+      {
+        "role": "user",
+        "content": "性格是个性心理特征的核心部分。"
+      },
+      {
+        "role": "assistant",
+        "content": "对，它体现了个体对现实的稳定态度和习惯化的行为方式。"
+      }
+    ],
+    "question": "它的内部结构主要包括哪四个主要特征？",
+    "ground_truth": "态度特征、意志特征、情绪特征、理智特征。"
+  },
+  {
+    "category": "C_Pronoun",
+    "history": [
+      {
+        "role": "user",
+        "content": "青少年期个体的同伴关系变得非常重要。"
+      },
+      {
+        "role": "assistant",
+        "content": "在这个阶段，同伴对他们的影响甚至超过了父母。"
+      }
+    ],
+    "question": "他们在社会性发展上还会出现什么明显的心理变化，表现为对成人的控制产生抵触情绪？",
+    "ground_truth": "逆反心理。"
+  },
+  {
+    "category": "C_Pronoun",
+    "history": [
+      {
+        "role": "user",
+        "content": "费斯廷格提出了非常著名的认知失调理论。"
+      },
+      {
+        "role": "assistant",
+        "content": "该理论解释了人们在认知和行为产生矛盾时的心理状态机制。"
+      }
+    ],
+    "question": "当个体出现这种矛盾状态时，为了消除失调恢复平衡，通常会怎么做？",
+    "ground_truth": "个体通常会改变自己的态度或行为。"
+  },
+  {
+    "category": "C_Pronoun",
+    "history": [
+      {
+        "role": "user",
+        "content": "人际关系的发展是一个循序渐进的过程。"
+      },
+      {
+        "role": "assistant",
+        "content": "它通常分为定向阶段、情感探索阶段、情感交流阶段和稳定交往阶段。"
+      }
+    ],
+    "question": "在第三个阶段中，双方主要的互动特征是什么？",
+    "ground_truth": "双方坦诚相待，分享内心的感受和想法。"
+  },
+  {
+    "category": "C_Pronoun",
+    "history": [
+      {
+        "role": "user",
+        "content": "精神分析疗法是临床心理学中非常具有影响力的一种治疗方法。"
+      },
+      {
+        "role": "assistant",
+        "content": "它通过自由联想、梦的解析等方式来挖掘患者的潜意识冲突。"
+      }
+    ],
+    "question": "这种疗法最初是由哪位心理学家创立的？",
+    "ground_truth": "弗洛伊德。"
+  },
+  {
+    "category": "C_Pronoun",
+    "history": [
+      {
+        "role": "user",
+        "content": "心理障碍的诊断是一个非常严谨且系统的过程。"
+      },
+      {
+        "role": "assistant",
+        "content": "通常需要综合使用心理评估、病史采集和临床观察等多种手段。"
+      }
+    ],
+    "question": "其中，通过与家属交谈来了解患者既往和家族情况的手段属于上述哪一种？",
+    "ground_truth": "病史采集。"
+  }
+]
