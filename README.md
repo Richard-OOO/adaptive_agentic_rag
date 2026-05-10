@@ -12,13 +12,11 @@
     <img src="src/sources/9qc6xt9qc6xt9qc6.png" width="150" height="150" alt="Adaptive RAG Logo" style="border-radius: 20px; box-shadow: 0 8px 32px rgba(0, 120, 255, 0.3);">
   </div>
 
-**基于 LangGraph 与混合检索的自适应智能 RAG 系统**
+  **基于 LangGraph 与混合检索的自适应智能 RAG 系统**
 
   <div style="width: 100%; height: 2px; margin: 20px 0; background: linear-gradient(90deg, transparent, #007DFF, transparent);"></div>
 
-  <div style="display: flex; justify-content: center; align-items: center;">
-    <div style="margin: 0 10px;">
-    <p align="center">
+  <p align="center">
     <a href="https://www.python.org/" target="_blank">
         <img src="https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white" alt="Python 3.12">
     </a>
@@ -43,12 +41,11 @@
     <a href="https://docs.ragas.io/en/latest/" target="_blank">
         <img src="https://img.shields.io/badge/Ragas-Evaluation-FF9900?logo=testcafe&logoColor=white" alt="Ragas">
     </a>
-</p>
-  </div>
+  </p>
 
-</div>
+</div> 
+<br> > 本项目通过动态意图路由、代词消解及多跳问题拆分，实现了针对垂直领域（如心理学）的精准知识检索与抗幻觉回答。
 
-> 本项目通过动态意图路由、代词消解及多跳问题拆分，实现了针对垂直领域（如心理学）的精准知识检索与抗幻觉回答。
 
 ## 🏗️ 核心架构
 
