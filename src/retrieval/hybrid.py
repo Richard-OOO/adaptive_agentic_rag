@@ -17,11 +17,13 @@ class NativeMilvusSearcher:
         collection_name: str,
         milvus_uri: str,
         embedding_api_url: str,
+        embedding_model_name: str,
+        embedding_api_key: str,
     ):
         self.collection_name = collection_name
         self.milvus_uri = milvus_uri
         self.client = MilvusClientManager.get_client(uri=milvus_uri)
-        self.embedding_client = RemoteEmbeddingClient(api_url=embedding_api_url)
+        self.embedding_client = RemoteEmbeddingClient(api_url=embedding_api_url, model_name=embedding_model_name, api_key=embedding_api_key)
 
         try:
             self.client.load_collection(self.collection_name)
@@ -49,7 +51,7 @@ class NativeMilvusSearcher:
 
         def _do_hybrid_search():
             req_dense = AnnSearchRequest(
-                data=[query_vecs["dense"]],
+                data=[query_vecs["embedding"]],
                 anns_field="dense_vector",
                 param={"metric_type": "IP"},
                 limit=k * 2,
@@ -57,7 +59,7 @@ class NativeMilvusSearcher:
             )
 
             req_sparse = AnnSearchRequest(
-                data=[query_vecs["sparse"]],
+                data=[query_vecs["sparse_embedding"]],
                 anns_field="sparse_vector",
                 param={"metric_type": "IP"},
                 limit=k * 2,

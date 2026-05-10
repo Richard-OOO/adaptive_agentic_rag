@@ -29,6 +29,10 @@ class Settings(BaseSettings):
 
     # ---- Embedding ----
     embedding_api_url: str
+    embedding_model_name: str
+    embedding_api_key: str
+
+
 
     # ---- Reranker ----
     reranker_api_base: str

@@ -23,6 +23,8 @@ async def query_milvus(
             collection_name=settings.milvus_collection_name,
             milvus_uri=settings.milvus_uri,
             embedding_api_url=settings.embedding_api_url,
+            embedding_model_name=settings.embedding_model_name,
+            embedding_api_key=settings.embedding_api_key,
         )
         docs = await searcher.asearch(query, k=top_k, user_id=user_id, session_id=session_id)
         return {

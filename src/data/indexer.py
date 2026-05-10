@@ -28,7 +28,7 @@ class DataIndexer:
     ):
         self.collection_name = collection_name
         self.client = MilvusClientManager.get_client(uri=milvus_uri)
-        self.embedding_client = RemoteEmbeddingClient(api_url=embedding_api_url)
+        self.embedding_client = RemoteEmbeddingClient(api_url=embedding_api_url, model_name=embedding_model_name, api_key=embedding_api_key)
         self.executor = ThreadPoolExecutor(max_workers=4)
 
         if not self.client.has_collection(self.collection_name):
@@ -50,6 +50,8 @@ class DataIndexer:
             collection_name=settings.milvus_collection_name,
             embedding_api_url=settings.embedding_api_url,
             vector_dim=vector_dim,
+            embedding_model_name=settings.embedding_model_name,
+            embedding_api_key=settings.embedding_api_key,
         )
 
     def _setup_collection(self, vector_dim):
@@ -112,7 +114,7 @@ class DataIndexer:
 
                 insert_data = []
                 for doc, emb in zip(batch, embeddings):
-                    row = {"dense_vector": emb["dense"], "sparse_vector": emb["sparse"], "text": doc.page_content}
+                    row = {"dense_vector": emb["embedding"], "sparse_vector": emb["sparse_embedding"], "text": doc.page_content}
                     meta = dict(doc.metadata)
                     if "knowledge_domains" in meta and isinstance(meta["knowledge_domains"], list):
                         meta["knowledge_domains"] = ",".join(meta["knowledge_domains"])

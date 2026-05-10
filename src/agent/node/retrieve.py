@@ -36,6 +36,8 @@ async def retrieve_node(state: GraphState, config: RunnableConfig) -> Dict[str, 
         collection_name=settings.milvus_collection_name,
         milvus_uri=settings.milvus_uri,
         embedding_api_url=settings.embedding_api_url,
+        embedding_model_name=settings.embedding_model_name,
+        embedding_api_key=settings.embedding_api_key,
     )
     agg: List[Document] = []
 
