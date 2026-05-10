@@ -1,6 +1,9 @@
 import logging
-from typing import Optional
+from typing import Optional, Union, overload
+
+import pymongo
 from motor.motor_asyncio import AsyncIOMotorClient
+from pymongo import MongoClient
 
 logger = logging.getLogger(__name__)
 
@@ -43,6 +46,7 @@ class RedisClientManager:
 
 class MongoDBClientManager:
     _client: Optional[AsyncIOMotorClient] = None
+    _sync_client: Optional[MongoClient] = None
 
     @classmethod
     async def init_connections(cls, uri: str):
@@ -51,18 +55,38 @@ class MongoDBClientManager:
         try:
             cls._client = AsyncIOMotorClient(uri)
             await cls._client.admin.command("ping")
-            logger.info("[DB Client] MongoDB 全局连接已建立.")
+            logger.info("[DB Client] MongoDB 异步连接已建立.")
         except Exception as e:
-            raise RuntimeError(f"[DB Client] MongoDB 连接失败: {e}")
+            raise RuntimeError(f"[DB Client] MongoDB 异步连接失败: {e}")
+
+        try:
+            cls._sync_client = pymongo.MongoClient(uri)
+            cls._sync_client.admin.command("ping")
+            logger.info("[DB Client] MongoDB 同步连接已建立.")
+        except Exception as e:
+            logger.warning(f"[DB Client] MongoDB 同步连接失败 (非致命): {e}")
 
     @classmethod
-    def get_client(cls) -> AsyncIOMotorClient:
+    @overload
+    def get_client(cls, sync: bool = False) -> AsyncIOMotorClient: ...
+    @classmethod
+    @overload
+    def get_client(cls, sync: bool = True) -> MongoClient: ...
+    @classmethod
+    def get_client(cls, sync: bool = False) -> Union[AsyncIOMotorClient, MongoClient]:
+        if sync:
+            if cls._sync_client is None:
+                raise RuntimeError("[DB Client] MongoDB 同步客户端尚未初始化")
+            return cls._sync_client
         if cls._client is None:
-            raise RuntimeError("[DB Client] MongoDB 尚未初始化")
+            raise RuntimeError("[DB Client] MongoDB 异步客户端尚未初始化")
         return cls._client
 
     @classmethod
     async def close_connections(cls):
         if cls._client:
             cls._client.close()
-            logger.info("[DB Client] MongoDB 连接已断开.")
+            logger.info("[DB Client] MongoDB 异步连接已断开.")
+        if cls._sync_client:
+            cls._sync_client.close()
+            logger.info("[DB Client] MongoDB 同步连接已断开.")
