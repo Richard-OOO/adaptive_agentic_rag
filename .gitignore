@@ -29,3 +29,16 @@ logs/
 .DS_Store
 Thumbs.db
 .langgraph_api/
+
+*.pckl
+.langgraph_ops.pckl
+
+
+*.db
+*.sqlite
+*.sqlite3
+.langgraph/
+.langgraph_api/
+*.log
+
+.trae
