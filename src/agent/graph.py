@@ -128,19 +128,10 @@ async def build_compiled_app(checkpointer=None):
 
     try:
         from langgraph.checkpoint.mongodb import MongoDBSaver
-        from langgraph.checkpoint.mongodb.saver import _create_saver_indexes
         from src.core.db_client import MongoDBClientManager
 
-        _create_saver_indexes = lambda *args, **kwargs: None
-
-        original_init = MongoDBSaver.__init__
-        def patched_init(self, *args, **kwargs):
-            self._client = args[0] if args else kwargs.get("client")
-            self._database = kwargs.get("database", "default")
-        MongoDBSaver.__init__ = patched_init
-
-        mongo_client = MongoDBClientManager.get_client()
-        checkpointer = MongoDBSaver(mongo_client)
+        sync_mongo_client = MongoDBClientManager.get_client(sync=True)
+        checkpointer = MongoDBSaver(sync_mongo_client)
         logger.info("[Graph] MongoDBSaver checkpoint 初始化成功")
         return workflow.compile(checkpointer=checkpointer)
     except Exception as e:
