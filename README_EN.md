@@ -45,7 +45,7 @@
     </a>
 </p>
   </div>
-
+</div>
 </div>
 
 > This project implements precise knowledge retrieval and hallucination-resistant answers for vertical domains (e.g., Psychology) through dynamic intent routing, pronoun resolution, and multi-hop question decomposition.
